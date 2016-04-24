@@ -3,9 +3,9 @@ package com.lnho.leetcode.solution;
 public class Solution001 {
 
     public static void main(String[] args) {
-      //  int a[] = {11, 2, 35, 66, 4, 3, 6, 7, 12, 33, 52, 22, 31, 25, 23};
-      //  DualPivotQuicksort.sort(a, 0, a.length - 1, null, 0, 0);
-      //  System.out.println(Arrays.toString(a));
+        //  int a[] = {11, 2, 35, 66, 4, 3, 6, 7, 12, 33, 52, 22, 31, 25, 23};
+        //  DualPivotQuicksort.sort(a, 0, a.length - 1, null, 0, 0);
+        //  System.out.println(Arrays.toString(a));
         int n = Integer.MAX_VALUE;
         test1(n);
         test2(n);
