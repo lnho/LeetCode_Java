@@ -12,8 +12,10 @@ public class Solution015Test {
     @Test
     public void threeSum() throws Exception {
         int[] nums = {-1, 0, 1, 2, -1, -4};
-        TestUtil.print(solution.threeSum(nums));
+        TestUtil.print(solution.threeSum2(nums));
         int[] nums2 = {-1, 0, 1, 2, 0, -0};
-        TestUtil.print(solution.threeSum(nums2));
+        TestUtil.print(solution.threeSum2(nums2));
+        int[] nums3 = {-1, 0, 1, 0};
+        TestUtil.print(solution.threeSum2(nums3));
     }
 }
