@@ -1,5 +1,7 @@
 package com.lnho.leetcode.solution;
 
+import java.util.Objects;
+
 public class Solution004 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         if (nums1.length == 0 && nums2.length == 0) {
@@ -14,7 +16,9 @@ public class Solution004 {
         int index1 = len / 2, index2 = len / 2;
         if (len % 2 == 0) index1--;
         int sum = 0, current, j = 0, k = 0;
-        if (mid1 < mid2) {
+        if (Objects.equals(mid1, mid2)) {
+            return mid1;
+        } else if (mid1 < mid2) {
             j = nums1.length < 2 ? 0 : nums1.length / 2 - 1;
         } else {
             k = nums2.length < 2 ? 0 : nums2.length / 2 - 1;
