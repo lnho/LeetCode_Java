@@ -2,8 +2,6 @@ package com.lnho.leetcode.solution;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class Solution037Test {
     @Test
     public void solveSudoku() throws Exception {
@@ -17,23 +15,11 @@ public class Solution037Test {
                 {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
                 {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
                 {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
-        Solution037 s = new Solution037();
-        for (char[] chars : board) {
-            for (char aChar : chars) {
-                System.out.print(" " + aChar + " ");
-            }
-            System.out.println();
-        }
-        s.solveSudoku(board);
-//        s.getCube(1);
-        s.check();
-//        for (char[] chars : board) {
-//            for (char aChar : chars) {
-//                System.out.print(" "+aChar+" ");
-//            }
-//            System.out.println();
-//        }
+        Solution037 s = new Solution037(board);
+        s.recursion();
+        s.printAllSolution();
     }
+
     @Test
     public void solveSudokuEasy() throws Exception {
         char[][] board = {
@@ -46,22 +32,8 @@ public class Solution037Test {
                 {'7', '.', '1', '.', '.', '9', '6', '3', '.'},
                 {'.', '3', '.', '7', '.', '4', '.', '9', '.'},
                 {'8', '9', '5', '.', '.', '.', '1', '.', '7'}};
-        Solution037 s = new Solution037();
-        for (char[] chars : board) {
-            for (char aChar : chars) {
-                System.out.print(" " + aChar + " ");
-            }
-            System.out.println();
-        }
-        s.solveSudoku(board);
-//        s.getCube(1);
-        s.check();
-//        for (char[] chars : board) {
-//            for (char aChar : chars) {
-//                System.out.print(" "+aChar+" ");
-//            }
-//            System.out.println();
-//        }
+        Solution037 s = new Solution037(board);
+        s.solve();
     }
 
     @Test
@@ -76,15 +48,10 @@ public class Solution037Test {
                 {'.', '.', '6', '.', '.', '.', '.', '5', '.'},
                 {'5', '.', '1', '.', '.', '.', '.', '4', '8'},
                 {'.', '.', '.', '2', '1', '5', '6', '.', '.'}};
-        Solution037 s = new Solution037();
-        for (char[] chars : board) {
-            for (char aChar : chars) {
-                System.out.print(" " + aChar + " ");
-            }
-            System.out.println();
-        }
-        s.solveSudoku(board);
-        s.check();
+        Solution037 s = new Solution037(board);
+//        s.solve();
+        s.recursion();
+        s.printAllSolution();
     }
 
     @Test
@@ -99,15 +66,8 @@ public class Solution037Test {
                 {'.', '3', '.', '9', '5', '.', '.', '.', '.'},
                 {'.', '.', '.', '.', '.', '6', '.', '3', '1'},
                 {'6', '2', '8', '1', '7', '3', '.', '.', '.'}};
-        Solution037 s = new Solution037();
-        for (char[] chars : board) {
-            for (char aChar : chars) {
-                System.out.print(" " + aChar + " ");
-            }
-            System.out.println();
-        }
-        s.solveSudoku(board);
-        s.check();
+        Solution037 s = new Solution037(board);
+        s.solve();
     }
 
 }
